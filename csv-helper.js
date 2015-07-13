@@ -31,5 +31,13 @@ module.exports = {
             ret.push(toArray(item));
         });
         return ret;
+    },
+
+    stringify: function(array) {
+        var ret = [];
+        array.forEach(function(item) {
+            ret.push(item.join(';'));
+        });
+        return ret.join('\r\n');
     }
 };
